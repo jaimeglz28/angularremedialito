@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#" class="btn btn-danger">100 MEXICANOS DIJERON</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent" class="collapse navbar-collapse justify-content-md-center" >
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active"  >
+        <a class="nav-link" [routerLink]="['/inicio']" routerLinkActive="router-link-active" >Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item" *ngIf="!auth.isLoggedIn()" >
+        <a class="nav-link" [routerLink]="['/login']" routerLinkActive="router-link-active" >Iniciar Sesion</a>
+      </li>
+     
+      <li class="nav-item"*ngIf="!auth.isLoggedIn()"  >
+        <a class="nav-link" [routerLink]="['/registro']" routerLinkActive="router-link-active" >Registro</a>
+      </li>
+      
+      <li class="nav-item"*ngIf="auth.admin()"  >
+        <a class="nav-link" >soy admin</a>
+      </li>
+    
+    <form class="form-inline my-2 my-lg-0">
+    
+      <li class="nav-item" *ngIf="auth.isLoggedIn()" >
+        <a class="nav-link" [routerLink]=""  (click)="auth.logout()" >Finalizar</a>
+      </li>
+    </form>
+  </ul></div>
+</nav>
+    
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

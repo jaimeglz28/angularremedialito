@@ -1,0 +1,34 @@
+<br>
+<br>
+<br>
+<div class="row offset-md-5 col-md-10">
+<form (submit)="registro()">
+    <div class="form-group">
+        <label for="username">Usuario</label>
+        <input type="text" class="form-control" id="usuario" aria-describedby="usuario" placeholder="Ingresa usuario"[(ngModel)]="credentials.username" [ngModelOptions]="{standalone: true}">
+
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Ingresa el Correo</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" [(ngModel)]="credentials.email"[ngModelOptions]="{standalone: true}">
+    
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Ingresa tu Contraseña</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"[(ngModel)]="credentials.password" [ngModelOptions]="{standalone: true}">
+  </div>
+  <div>
+    <select class="custom-select custom-select-sm"  [(ngModel)]="credentials.rol" [ngModelOptions]="{standalone: true}">
+      <option selected   >Selecciona Rol</option>
+      <option value="1">Admin</option>
+      <option value="0">Jugador</option>
+    
+    </select>
+  </div>
+  <br>
+  
+  <button type="submit" class="btn btn-primary">Registrarse</button>
+  </div>
+</form>
+</div>
+
