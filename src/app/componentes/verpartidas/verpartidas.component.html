@@ -1,0 +1,25 @@
+<div class="container">
+  <div  class="jumbotron mt-5">
+    <div class="col-sm-8 mx-auto">
+      <h1 class="text-center">Partidas</h1>
+      </div>
+      <table  class="table col-md-6 mx-auto">
+        <tr *ngFor="let item of partidas">
+          <td>Partida</td>
+          <td>{{item.nombre_partida}}</td>
+        </tr>
+        <tr>
+            <td>Activa</td>
+            <td>Si</td>
+          </tr>
+
+     
+       
+         
+      </table>
+     
+        
+        <button type="submit" [routerLink]="['/esperando']" routerLinkActive="router-link-active"  class="btn btn-primary">Jugar</button>
+        </div>
+          
+  </div>

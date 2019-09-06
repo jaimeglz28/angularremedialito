@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './componentes/navbar/navbar.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { HttpClientModule} from '@angular/common/http';
-import {FormsModule}  from '@angular/forms';
+import {FormsModule, ReactiveFormsModule}  from '@angular/forms';
 import {RouterModule, Routes} from '@angular/router';
 
 import {ProfileComponent} from './componentes/profile/profile.component'
@@ -15,6 +15,11 @@ import {RegistroComponent} from './componentes/registro/registro.component';
 import {InicioComponent} from './componentes/inicio/inicio.component'
 import {Authentictionservice} from './authentication.service'
 import {AuthGuardservice} from './auth-guard.service';
+import { AdministradorComponent } from './componentes/administrador/administrador.component';
+import { VerpartidasComponent } from './componentes/verpartidas/verpartidas.component';
+import { JugadorComponent } from './componentes/jugador/jugador.component';
+import { EsperandoComponent } from './componentes/esperando/esperando.component';
+
 
 
 
@@ -24,7 +29,11 @@ const routes: Routes =[
   {path:'registro',component:RegistroComponent},
   {path:'profile',
   component:ProfileComponent,
-  canActivate: [AuthGuardservice]}
+  canActivate: [AuthGuardservice]},
+  {path:'verpartida', component:VerpartidasComponent},
+  {path:'administrador', component:AdministradorComponent},
+  {path:'jugador', component:JugadorComponent},
+  {path:'esperando', component:EsperandoComponent}
   
   
   
@@ -41,14 +50,20 @@ const routes: Routes =[
     RegistroComponent,
     InicioComponent,
     InicioComponent,
-    RegistroComponent
+    RegistroComponent,
+    AdministradorComponent,
+    VerpartidasComponent,
+    JugadorComponent,
+    EsperandoComponent,
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     RouterModule.forRoot(routes),
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [Authentictionservice, AuthGuardservice],
   bootstrap: [AppComponent]

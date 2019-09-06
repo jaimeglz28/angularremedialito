@@ -31,7 +31,7 @@ export interface TokenPayload{
 @Injectable()
 export class Authentictionservice{
     private token: string 
-    private url = 'http://localhost:3333/';
+    private url = 'http://192.168.43.29:3333/';
      
     constructor (private http: HttpClient, private router:Router){ }
 
@@ -104,6 +104,7 @@ export class Authentictionservice{
             localStorage.removeItem('rol')
             this.token =''
             window.localStorage.removeItem('usertoken')
+            window.localStorage.removeItem('username')
             this.router.navigateByUrl('/')
         }
 

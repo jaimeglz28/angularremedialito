@@ -1,0 +1,31 @@
+<div class="panel panel-default" class="row offset-md-5 col-md-5 ">
+  <div class="panel-heading">{{textopregunta}}</div>   
+  <p>puntos {{sc}}</p>
+  
+
+  
+ 
+</div>
+<br>
+<div class="panel panel-default">
+  <div class="panel-heading">Respuestas</div>
+  <div class="panel-body">
+    
+  </div>
+  
+ 
+  <ul class="list-group">
+      <div class="radio"*ngFor="let item of trespuesta">
+          <label><input type="radio" name="optradio" (click)="mandarvalor(item.valor)" checked value={{item.valor}}>{{item.Respuestas}}</label>
+        </div>
+     <!-- <li class="list-group-item"*ngFor="let item of trespuesta">{{item.Respuestas}}</li> -->
+  </ul>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+<button type="button" class="btn btn-primary btn-block"(click)="jugar()">Push</button>
+
+

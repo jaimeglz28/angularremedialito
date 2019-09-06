@@ -17,6 +17,7 @@ export class ProfileComponent implements OnInit {
     user => {
       this.details =user
       localStorage.setItem('rol',user.rol)
+      localStorage.setItem('username',user.username)
     },
     err =>{
       console.error(err)

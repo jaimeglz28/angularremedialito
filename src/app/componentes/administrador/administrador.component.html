@@ -1,0 +1,33 @@
+<br>
+<br>
+
+
+<br>
+<br>
+<br>
+<div class="row offset-md-5 col-md-10">
+<form  [formGroup]="formcrearpartida" (ngSubmit)='registrart()'>
+    
+  <div class="form-group">
+    <label for="exampleInputPassword1">Ingresa el nombre de la partida</label>
+    <input type="text" class="form-control" id="partida" placeholder="Partida"   formControlName="nombre_partida">
+  </div>
+  <div>
+    <select class="custom-select custom-select-sm" formControlName="activo" >
+      <option selected   >Activa tu partida</option>
+      <option value="1">Activo</option>
+      <option value="0">Inactivo</option>
+    
+    </select>
+  </div>
+  <br>
+  
+  <button type="submit" class="btn btn-primary">Crear partida</button>
+  <br>
+  <br>
+  <button type="button" class="btn btn-primary"(click)="enviarr()">Crear Preguntas</button>
+
+
+</form>
+</div>
+

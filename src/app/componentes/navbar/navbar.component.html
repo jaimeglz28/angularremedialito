@@ -18,13 +18,17 @@
       </li>
       
       <li class="nav-item"*ngIf="auth.admin()"  >
-        <a class="nav-link" >soy admin</a>
+        <a class="nav-link" [routerLink]="['/administrador']" routerLinkActive="router-link-active" >Crear Partida</a>
+      </li>
+      
+      <li class="nav-item"*ngIf="auth.isLoggedIn()"  >
+        <a class="nav-link" [routerLink]="['/verpartida']" routerLinkActive="router-link-active" >Ver partidas Disponibles</a>
       </li>
     
     <form class="form-inline my-2 my-lg-0">
     
-      <li class="nav-item" *ngIf="auth.isLoggedIn()" >
-        <a class="nav-link" [routerLink]=""  (click)="auth.logout()" >Finalizar</a>
+      <li class="nav-item my-2 my-lg-0" *ngIf="auth.isLoggedIn()"  >
+        <button  class="btn btn-danger float-right"  [routerLink]=""  (click)="auth.logout()" >Finalizar</button>
       </li>
     </form>
   </ul></div>
